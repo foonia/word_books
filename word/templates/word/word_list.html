@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+         <th scope="col">word</th>
+         <th scope="col">count</th>
+         <th scope="col">created_at</th>
+        {% for word in word_list %}
+
+        <tr>
+            <td>{{ word.word }}</td>
+            <td>{{ word.count }}</td>
+            <td>{{ word.created_at }}</td>
+        </tr> 
+
+        {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
