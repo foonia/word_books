@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block add %}active{% endblock %}
+
+{% block content %}
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<table>
+    <form action="" method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input type="submit" class="btn btn-primary btn-lg" />
+    </form>
+</table>
+
+{% endblock %}

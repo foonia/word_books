@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block test %}active{% endblock %}
+
+
+{% block content %}
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<form action="" method="get" />
+    <h1 align="center">{{ word.word }}</h1>
+    <div align="center">
+        <input type="text" name="{{ word.word }}">
+        <input type="submit" class="btn btn-primary" />
+    </div>
+</form>
+
+
+
+{% endblock %}
