@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from .models import Word
@@ -33,14 +34,18 @@ def word_add(request):
 
 
 def word_test(request):
-
     if request.GET:
         for key, value in request.GET.items():
             query = Word.objects.get(word=key)
             if query.meaning == value:
                 count = query.count
-                Word.objects.filter(word=key).update(count=count+1)
-                print('count + 1')
+                if count > 5:
+                    Word.objects.filter(word=key).delete()
+                else:
+                    Word.objects.filter(word=key).update(count=count+1)
+                messages.success(request, 'the answer is true! {} is {}'.format(key, value))
+            else:
+                messages.warning(request, 'the answer is false! answer is {}'.format(query.meaning))
 
     query = Word.objects.all()[random.randrange(0,Word.objects.count())]
     
