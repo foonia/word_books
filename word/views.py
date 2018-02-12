@@ -37,20 +37,21 @@ def word_test(request):
     if request.GET:
         for key, value in request.GET.items():
 
-            query = Word.objects.get(word=key)
-            split_words = query.meaning.split(',')
+            word = Word.objects.get(word=key)
+            split_words = word.meaning.split(',')
             split_words = [s.strip() for s in split_words]
 
             if value in split_words:
-                count = query.count
+                count = word.count
                 if count >= 5:
-                    Word.objects.filter(word=key).delete()
+                    word.delete()
                 else:
-                    Word.objects.filter(word=key).update(count=count+1)
-                messages.success(request, 'the answer is true! {} is {}'.format(key, query.meaning))
+                    word.count = word.count + 1
+                    word.save()
+                messages.success(request, 'the answer is true! {} is {}'.format(key, word.meaning))
             else:
-                messages.warning(request, 'the answer is false! {} is {}'.format(key, query.meaning))
+                messages.warning(request, 'the answer is false! {} is {}'.format(key, word.meaning))
 
-    query = Word.objects.all()[random.randrange(0,Word.objects.count())]
+    word = Word.objects.all()[random.randrange(0,Word.objects.count())]
     
-    return render(request, 'word/word_test.html', {'word':query})
+    return render(request, 'word/word_test.html', {'word': word})
