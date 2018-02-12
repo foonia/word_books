@@ -48,9 +48,10 @@ def word_test(request):
                 else:
                     word.count = word.count + 1
                     word.save()
-                messages.success(request, 'the answer is true! {} is {}'.format(key, word.meaning))
+
+                messages.success(request, 'the answer is True! {} is {}'.format(key, word.meaning))
             else:
-                messages.warning(request, 'the answer is false! {} is {}'.format(key, word.meaning))
+                messages.warning(request, 'the answer is False! {} is {}'.format(key, word.meaning))
 
     word = Word.objects.all()[random.randrange(0,Word.objects.count())]
     
