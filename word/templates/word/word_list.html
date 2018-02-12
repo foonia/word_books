@@ -22,7 +22,12 @@
                     <td>
                         <input type="checkbox" name="{{ word.word }}">
                     </td>
-                    <td>{{ word.word }}</td>
+                    <td>{{ word.word }} 
+                        {% if word.count == 0 %}
+                        <span class="badge badge-warning">Memorization</span>
+                        {% endif %}
+                    </td>
+
                     <td>{{ word.meaning }}</td>
                     <td>{{ word.count }}</td>
                 </tr> 
