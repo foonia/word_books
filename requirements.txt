@@ -1,6 +1,7 @@
 django==2.0.2
 
 django-bootstrap3
+django-extensions
 
 
 
