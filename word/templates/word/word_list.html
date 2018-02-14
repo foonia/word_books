@@ -10,8 +10,8 @@
 
 <div class="row">
     <div class="col-md-12">
-        <table class="table">
-            <form action="" method="get">
+        <form action="" method="get">
+            <table class="table">
                 <th scope="col">Check</th>
                 <th scope="col">Word</th>
                 <th scope="col">Meaning</th>
@@ -19,9 +19,7 @@
 
                 {% for word in word_list %}
                 <tr>
-                    <td>
-                        <input type="checkbox" name="{{ word.word }}">
-                    </td>
+                    <td><input type="checkbox" name="{{ word.word }}"></td>
                     <td>{{ word.word }} 
                         {% if word.count == 0 %}
                         <span class="badge badge-warning">Memorization</span>
@@ -31,10 +29,10 @@
                     <td>{{ word.meaning }}</td>
                     <td>{{ word.count }}</td>
                 </tr> 
-                {% endfor %}
-                <p><input type="submit" class="btn btn-primary" value="외웠어!" /></p>
-            </form>
-        </table>
+                {%  endfor %}
+            </table>
+            <button type="submit" class="btn btn-primary">Delete</button>
+        </form>
     </div>
 </div>
 {% endblock %}
