@@ -4,14 +4,10 @@
 
 {% block content %}
 
-{% load bootstrap3 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
 <div class="row">
     <div class="col-md-12">
-        <form action="" method="get">
-            <table class="table">
+        <table class="table">
+            <form action="" method="get">
                 <th scope="col">Check</th>
                 <th scope="col">Word</th>
                 <th scope="col">Meaning</th>
@@ -30,9 +26,9 @@
                     <td>{{ word.count }}</td>
                 </tr> 
                 {%  endfor %}
-            </table>
-            <button type="submit" class="btn btn-primary">Delete</button>
-        </form>
+                <button type="submit" class="btn btn-primary">Delete</button>
+            </form>
+        </table>
     </div>
 </div>
 {% endblock %}

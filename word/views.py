@@ -31,22 +31,22 @@ def word_add(request):
 
 def word_test(request):
     if request.GET:
-        word, mean = request.GET.items[0]
-        word = Word.objects.get(word=word)
-        split_words = word.meaning.split(',')
+        word, mean = list(request.GET.items())[0]
+        inst = Word.objects.get(word=word)
+        split_words = inst.meaning.split(',')
         split_words = [ s.strip() for s in split_words ]
 
-        if value in split_words:
-            count = word.count
+        if mean in split_words:
+            count = inst.count
             if count >= 5:
-                word.delete()
+                inst.delete()
             else:
-                word.count = count + 1
-                word.save()
+                inst.count = count + 1
+                inst.save()
 
-            messages.success(request, 'the answer is True! {} is {}'.format(key, word.meaning))
+            messages.success(request, 'the answer is True! {} is {}'.format(word, inst.meaning))
         else:
-            messages.warning(request, 'the answer is False! {} is {}'.format(key, word.meaning))
+            messages.warning(request, 'the answer is False! {} is {}'.format(word, inst.meaning))
 
     word = Word.objects.all()[random.randrange(0,Word.objects.count())]
 
