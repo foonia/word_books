@@ -4,6 +4,8 @@
 
 {% block content %}
 
+{% load bootstrap_pagination %}
+
 <div class="row">
     <div class="col-md-12">
         <form action="" method="get">
@@ -29,6 +31,14 @@
             </table>
             <button type="submit" class="btn btn-primary">Delete</button>
         </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="pagination">
+        {% bootstrap_paginate word_list %}
+        </ul>
     </div>
 </div>
 {% endblock %}

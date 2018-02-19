@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
+from django.core.paginator import Paginator
 from .models import Word
 from .forms import WordForm
 import random
@@ -9,12 +10,23 @@ class WordList(ListView):
     model = Word
 
     def get(self, request):
+
+        queryset = Word.objects.all().order_by('-id')
+
+        if 'page' in request.GET:
+            page = request.GET.get('page')
+            paginator = Paginator(queryset, 2)
+
+            word_list = paginator.get_page(page)
+            return render(request, 'word/word_list.html', {'word_list':word_list})
+            
+
         for key, value in request.GET.items():
             query = Word.objects.get(word=key) 
             Word.objects.filter(word=query.word).delete()
 
-        queryset = Word.objects.all().order_by('-id')
         return render(request, 'word/word_list.html', {'word_list':queryset})
+
 
 
 def word_add(request):

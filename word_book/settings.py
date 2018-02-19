@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     
     'bootstrap3',
     'django_extensions',
+    'bootstrap_pagination',
+    'el_pagination',
 
     'word',
 ]
