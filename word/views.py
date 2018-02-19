@@ -12,20 +12,21 @@ class WordList(ListView):
     def get(self, request):
 
         queryset = Word.objects.all().order_by('-id')
+        paginator = Paginator(queryset, 15)
 
         if 'page' in request.GET:
             page = request.GET.get('page')
-            paginator = Paginator(queryset, 2)
-
             word_list = paginator.get_page(page)
             return render(request, 'word/word_list.html', {'word_list':word_list})
-            
+
 
         for key, value in request.GET.items():
             query = Word.objects.get(word=key) 
             Word.objects.filter(word=query.word).delete()
 
-        return render(request, 'word/word_list.html', {'word_list':queryset})
+
+        word_list = paginator.get_page(1)
+        return render(request, 'word/word_list.html', {'word_list':word_list})
 
 
 
