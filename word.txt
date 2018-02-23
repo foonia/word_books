@@ -1,0 +1,86 @@
+appication 신청 1
+assistive 보조적인 1
+raw 원본의, 가공하지 않은 4
+vervose_name 자세한 이름 2
+concurrent 동시 발생의 1
+implicitly 암묵적으로 2
+regex 정규식 5
+comprehensive 포괄적인, 이해력 있는 2
+comprehension 이해, 포함 2
+precedence 상위, 앞서있는 상태 0
+forger 위조자 4
+forgery 위조 4
+manipulate 교묘히 다루다 4
+early on 일찍이, 조기에 3
+rather as 오히려 5
+identify 식별하다, 동일시 하다 2
+deploy 전개하다 1
+explicit 명백한 3
+explicitly 명시적으로 0
+pick 고르다 4
+implementation 이행 3
+passed to ~ 전달 된 1
+built-in 내장 4
+so that 그래서 4
+instantiate 인스턴스화 하다 1
+populate 채우다 1
+accompany 따르게 하다, 동반하다 4
+lookup 조회 2
+undisputed leader 확실한 지도자 3
+fabric 구조, 구조물, 옷감 3
+intersect 교차하다 5
+aggregate 집합, 집합하다 4
+dispute 분쟁, 논쟁하다 1
+interact 상호작용하다 2
+strip 벗기다, 조각 4
+constraint 제약, 규제 4
+integrity 무결성, 청렴 5
+duplicate 복제, 똑같은, 중복의, 이중으로하다 2
+indenpendence 독립성 3
+implication 함축 2
+replication(번식) 복제 1
+notation 표기법 3
+nested 중첩된 2
+once again 다시 한번 1
+sincere 성실한 3
+genuine 진짜의, 성실한 2
+abort 중단되다, 유산되다 0
+concrete 결합체,  구체적인, 콘크리트 0
+cascade 종속 1
+emulate(긍정) 모방하다, 경쟁하다 1
+imitate(부정) 모방하다 4
+on delete 삭제시 2
+comprise 이루다, 포함하다 0
+intuitive 직관적인 2
+via ~에 의하여, ~을 경유하여 0
+narrow 제한된, 좁혀지다 1
+equate 같게 하다 0
+criteria 기준, 표준 3
+Normalize 표준화하다 1
+subsequently 이후에 0
+implement 도구, 수단, 이행하다 2
+intersection 교차, 가로지름 0
+up-to-date 최신 정보 0
+shortcuts 단축키 1
+now that 이제 0
+undo 되돌리다 2
+functionality 기능성 1
+capability 능력 0
+capable 유능한, 실력 있는 0
+vast 거대한 1
+portion 부분 2
+earlier form 좀전의 폼 0
+in turn 차례로 1
+sensible 현명한, 분별력 있는, 느낄 수 있는 1
+Likewise 마찬가지로 1
+sequential 연달아 일어나는 1
+anything else 다른 것 0
+ddung-i 😛 0
+redundant 많은, (과하게)많은, 불필요한 0
+convention 협약, 관례 0
+conventional 전통적인 0
+evaluation 평가 1
+inclusion 포함 1
+compatible 호환 가능한, 양립할 수 있는 0
+conclusion 결론 1
+entryes 항목 1
