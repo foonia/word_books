@@ -11,16 +11,43 @@
         <title>BOOK</title>
     </head>
     <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{% url 'word:word_list' %}">단어장</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="navbar-brand" href="{% url 'word:word_test' %}">테스트<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="{% url 'word:word_add' %}">단어 추가</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!--
         <div class="container-fluid">
             <p>
             <nav class="nav nav-pills nav-fill">
                 <a class="nav-item nav-link {% block list %}{% endblock %}" href="{% url 'word:word_list'%}">Word_List</a>
                 <a class="nav-item nav-link {% block test %}{% endblock %}"  href="{% url 'word:word_test' %}">Word_Test</a>
                 <a class="nav-item nav-link {% block add %}{% endblock %}" href="{% url 'word:word_add' %}">Word_Add</a>
-                <a class="nav-item nav-link disabled" href="#">Word_Update</a>
+                <a class="nav-item nav-link disabled" href="#">Upload_Cloud</a>
             </nav>
             </P>
-        </div>
+        </div>-->
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
