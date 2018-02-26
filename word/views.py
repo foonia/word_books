@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
 from .models import Word
 from .forms import WordForm
 import random
@@ -29,7 +30,7 @@ class WordList(ListView):
         return render(request, 'word/word_list.html', {'word_list':word_list})
 
 
-
+@login_required
 def word_add(request):
     if request.method == "POST":
         form = WordForm(request.POST)
@@ -41,7 +42,7 @@ def word_add(request):
 
     return render(request, 'word/word_add.html', {'form':form})
 
-
+@login_required
 def word_test(request):
     if request.GET:
         word, mean = list(request.GET.items())[0]

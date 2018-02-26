@@ -6,4 +6,5 @@ urlpatterns = [
     path('', lambda request:redirect('word:word_list')),
     path('admin/', admin.site.urls),
     path('word/', include('word.urls')),
+    path('accounts/', include('accounts.urls')),
 ]

@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'bootstrap_pagination',
 
     'word',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'word_book', 'static'), 
 ]
+STATIC_ROOT = []
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+Login_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/accounts/profile/'
+LOGOUT_REDIRECT_URL = None
+AUTH_USER_MODEL = 'auth.user'
